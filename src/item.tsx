@@ -54,9 +54,9 @@ export const Item = () => {
         </Container>
 
         <Container>
-          <Typography fontSize={18} weight="semiBold">
+          <DetailsTitle fontSize={18} weight="semiBold">
             {params.name}
-          </Typography>
+          </DetailsTitle>
 
           {params.salePrice ? (
             <Typography fontSize={18} color="red">
@@ -65,7 +65,7 @@ export const Item = () => {
               SAR {params.price}
             </Typography>
           ) : (
-            <Typography fontSize={18}>SAR {params.price}</Typography>
+            <Typography fontSize={18} color="black">SAR {params.price}</Typography>
           )}
         </Container>
 
@@ -77,10 +77,10 @@ export const Item = () => {
           <DetailsTitle>Details</DetailsTitle>
           <DetailsLine label="Brand">{params.brand}</DetailsLine>
           <DetailsLine label="Color">{SPEC_1}</DetailsLine>
-          <DetailsLine label="SKU">{SPEC_2}</DetailsLine>
+          <DetailsLine label="SKU" color="black">{SPEC_2}</DetailsLine>
 
           <Typography weight="medium" />
-          <Typography weight="medium">Specifications</Typography>
+          <DetailsTitle weight="medium">Specifications</DetailsTitle>
           <DetailsLine label="Type">{SPEC_3}</DetailsLine>
           <DetailsLine label="Weight">
             {SPEC_4} kg
